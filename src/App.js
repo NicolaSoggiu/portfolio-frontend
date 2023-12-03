@@ -1,9 +1,9 @@
-import "./App.css";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { getProjects } from "./services/api/projects/projectsApi";
-import Input from "./components/input/Input";
 import { useNavigate } from "react-router-dom";
 import { routes } from "./utils/routes";
+import NavBar from "./components/input/NavBar";
 
 function App() {
   const navigate = useNavigate();
@@ -34,12 +34,13 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      {projects && projects.map(mappingProjects)}
-      <Input typeInput="text" onChangeInput={onChangeInput} />
-      <Input typeInput="password" onChangeInput={onChangeInput} />
-      <button onClick={changePage}>Click</button>
-    </div>
+    <ChakraProvider>
+      <Box bg="#121212" minHeight="100vh">
+        <div className="App">
+          <NavBar />
+        </div>
+      </Box>
+    </ChakraProvider>
   );
 }
 
