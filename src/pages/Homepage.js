@@ -12,7 +12,12 @@ function Homepage() {
 
   const mappingProjects = (project) => {
     console.log("project", project);
-    return <div key={project.id}>{project.title}</div>;
+    return (
+      <>
+        <div key={project.id}>{project.title}</div>
+        <img src={project.image} alt={project.title} />;
+      </>
+    );
   };
 
   const onChangeInput = (e) => {
@@ -32,34 +37,34 @@ function Homepage() {
     <>
       <div>Ciao sono la homepage</div>
       {projects.map(mappingProjects)}
-      <Test
+      {/* <Test
         // name="andrea"
         click={() => {
           console.log("clicked");
         }}
-      />
+      /> */}
     </>
   );
 }
 
-const isNameDefined = (name) => {
-  if (name) {
-    return <span>{name}</span>;
-  } else {
-    return <span>Nome non definito </span>;
-  }
-};
+// const isNameDefined = (name) => {
+//   if (name) {
+//     return <span>{name}</span>;
+//   } else {
+//     return <span>Nome non definito </span>;
+//   }
+// };
 
-const Test = ({ name, click, children }) => {
-  return (
-    <div>
-      {/* { name ? <span>{name}</span> : <span>Nome non definito</span> } */}
-      {isNameDefined(name)}
-      <span onClick={click}>Ciao sono il test</span>
-      <div>{children}</div>
-    </div>
-  );
-};
+// const Test = ({ name, click, children }) => {
+//   return (
+//     <div>
+//       {/* { name ? <span>{name}</span> : <span>Nome non definito</span> } */}
+//       {isNameDefined(name)}
+//       <span onClick={click}>Ciao sono il test</span>
+//       <div>{children}</div>
+//     </div>
+//   );
+// };
 
 // Test.defaultProps = { name: "nicola" };
 
