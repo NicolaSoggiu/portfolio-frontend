@@ -14,7 +14,9 @@ function Homepage() {
     console.log("project", project);
     return (
       <>
-        <div key={project.id}>{project.title}</div>
+        <div style={{ color: "#FAF446" }} key={project.id}>
+          {project.title}
+        </div>
         <img src={project.image} alt={project.title} />;
       </>
     );
@@ -35,7 +37,7 @@ function Homepage() {
 
   return (
     <>
-      <div>Ciao sono la homepage</div>
+      <div style={{ color: "#FAF446" }}>Ciao sono la homepage</div>
       {projects.map(mappingProjects)}
       {/* <Test
         // name="andrea"
