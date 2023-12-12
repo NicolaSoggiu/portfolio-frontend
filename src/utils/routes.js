@@ -1,1 +1,6 @@
-export const routes = { loginPage: "/login", registerPage: "/register" };
+export const routes = {
+  homePage: "/home",
+  loginPage: "/login/:id",
+  registerPage: "/register",
+  layoutPage: "/",
+};
