@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { getProjects } from "../services/api/projects/projectsApi";
+import { getProjects } from "../../services/api/projects/projectsApi";
 import { Box } from "@chakra-ui/react";
+import "./Projects.css";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -13,7 +14,7 @@ const Projects = () => {
     console.log("project", project);
     return (
       <Box key={project.id}>
-        <div style={{ color: "#FAF446" }} key={project.id}>
+        <div className="projTitle" key={project.id}>
           {project.title}
         </div>
         <img src={project.image} alt={project.title} />;
@@ -31,8 +32,10 @@ const Projects = () => {
   };
   return (
     <>
-      <di style={{ color: "#FAF446" }}>My projects: </di>
-      {projects.map(mappingProjects)}
+      <Box className="container">
+        <div className="myTitle">My projects: </div>
+        <div className="projects">{projects.map(mappingProjects)}</div>
+      </Box>
     </>
   );
 };

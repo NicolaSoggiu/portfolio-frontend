@@ -1,14 +1,10 @@
-import {
-  Box,
-  HStack,
-  Image,
-  Stack,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
 import React from "react";
 import logo from "../../assets/logo.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { routes } from "../../utils/routes";
+import { Box, HStack, Image, Link as ChakraLink } from "@chakra-ui/react";
+import "./NavBar.css";
+
 const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,9 +16,17 @@ const NavBar = () => {
 
   return (
     <Box w="100%" bg="#121212" borderBottom="2px solid #FAF446">
-      <HStack spacing={4} align="center">
-        <Image src={logo} boxSize="170px" />
-        <Stack direction="row" spacing={4}>
+      <HStack className="navbar" align="center">
+        <ChakraLink onClick={goTo(routes.homePage)}>
+          <Image src={logo} boxSize="130px" />
+        </ChakraLink>
+        <HStack
+          spacing={4}
+          className="voice"
+          paddingEnd={50}
+          flex={1}
+          justifyContent="center"
+        >
           <ChakraLink
             onClick={goTo(routes.homePage)}
             color="#FAF446"
@@ -44,7 +48,7 @@ const NavBar = () => {
           >
             Projects
           </ChakraLink>
-        </Stack>
+        </HStack>
       </HStack>
     </Box>
   );
