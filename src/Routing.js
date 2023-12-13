@@ -6,8 +6,8 @@ import Layout from "./components/Layout/Layout";
 import { routes } from "./utils/routes";
 
 //Screens frontEnd
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Homepage from "./pages/Homepage";
 
@@ -23,8 +23,8 @@ function Routing(props) {
         <Routes>
           <Route path={routes.layoutPage} element={<Layout />}>
             <Route path={routes.homePage} element={<Homepage />} />
-            <Route path={routes.loginPage} element={<Login />} />
-            <Route path={routes.registerPage} element={<Register />} />
+            <Route path={routes.projects} element={<Projects />} />
+            <Route path={routes.contactsPage} element={<Contacts />} />
           </Route>
           {/* NICE TO HAVE: <Route path:"travelTalks" element <TravelTalks> /> */}
           {/* !!! we need to change the element passed to path "*" */}

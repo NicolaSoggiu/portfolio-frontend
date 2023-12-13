@@ -13,7 +13,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const goTo = (page) => (e) => {
-    navigate(routes.loginPage, {
+    navigate(page, {
       state: { from: location.pathname, ParamentroUno: "path test" },
     });
   };
