@@ -3,7 +3,7 @@ import "./Homepage.css";
 function Homepage() {
   return (
     <>
-      <div style={{ color: "#FAF446" }}>Ciao sono la homepage</div>
+      <div className="title">Ciao sono la homepage</div>
       {/* <Test
         // name="andrea"
         click={() => {
