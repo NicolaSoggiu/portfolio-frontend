@@ -20,7 +20,12 @@
     padding-bottom: 1rem;
 }
 
+.image {
+    border: 2px solid grey;
+}
+
 img {
-    width: 250px;
-    height: 150px;
+    max-width: 100%; /* Larghezza massima del container padre */
+    height: auto; /* Mantieni le proporzioni originali */
+    max-height: 200px; /* Altezza massima desiderata */
 }

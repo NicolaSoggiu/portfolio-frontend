@@ -18,6 +18,7 @@ const Projects = () => {
           {project.title}
         </div>
         <img
+          className="image"
           src={`http://localhost:8080/static/${project.image}`}
           alt={project.title}
         />
