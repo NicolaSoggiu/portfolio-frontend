@@ -1,5 +1,10 @@
 .title {
     text-align: center;
+
+    color: #FAF446;
+}
+
+.description {
     padding: 2rem;
     color: #FAF446;
 }

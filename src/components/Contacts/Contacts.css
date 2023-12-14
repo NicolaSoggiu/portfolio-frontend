@@ -1,5 +1,14 @@
+.container {
+    color: #FAF446;
+    padding: 2rem;
+}
+
 .title {
     text-align: center;
     padding: 2rem;
     color: #FAF446;
+}
+
+.lyst a {
+    list-style: none;
 }

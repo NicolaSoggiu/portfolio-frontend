@@ -3,7 +3,13 @@ import "./Homepage.css";
 function Homepage() {
   return (
     <>
-      <div className="title">Ciao sono la homepage</div>
+      <div className="container">
+        <div className="title">Welcome to my Portfolio!</div>
+        <span className="description">
+          Hi, I'm Nicola, a passionate junior full stakc Web Developer from
+          Italy. Here you can see all my projects and contacts!
+        </span>
+      </div>
       {/* <Test
         // name="andrea"
         click={() => {
