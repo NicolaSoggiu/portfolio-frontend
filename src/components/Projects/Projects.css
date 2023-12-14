@@ -1,7 +1,9 @@
-.container {
-    margin: 1rem;
+ .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
 }
-
+ 
 .myTitle {
     padding: 1rem;
     text-align: center;
@@ -9,9 +11,9 @@
 }
 
 .projects {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    gap: 3rem;
+    width: 50%;
 }
 
 .projTitle {
@@ -20,7 +22,3 @@
     padding-bottom: 1rem;
 }
 
-img {
-    width: 250px;
-    height: 150px;
-}

@@ -17,7 +17,10 @@ const Projects = () => {
         <div className="projTitle" key={project.id}>
           {project.title}
         </div>
-        <img src={project.image} alt={project.title} />;
+        <img
+          src={`http://localhost:8080/static/${project.image}`}
+          alt={project.title}
+        />
       </Box>
     );
   };
@@ -32,8 +35,8 @@ const Projects = () => {
   };
   return (
     <>
+      <div className="myTitle">My projects: </div>
       <Box className="container">
-        <div className="myTitle">My projects: </div>
         <div className="projects">{projects.map(mappingProjects)}</div>
       </Box>
     </>
