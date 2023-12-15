@@ -11,3 +11,7 @@
 .lyst a {
     list-style: none;
 }
+
+ul {
+    padding-left: 0;
+}
