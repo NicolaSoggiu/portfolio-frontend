@@ -13,16 +13,18 @@ const Projects = () => {
   const mappingProjects = (project) => {
     console.log("project", project);
     return (
-      <Box key={project.id}>
-        <div className="projTitle" key={project.id}>
-          {project.title}
-        </div>
-        <img
-          className="image"
-          src={`http://localhost:8080/static/${project.image}`}
-          alt={project.title}
-        />
-      </Box>
+      <div key={project.id} className="col-md-6">
+        <Box>
+          <div className="projTitle" key={project.id}>
+            {project.title}
+          </div>
+          <img
+            className="image"
+            src={`http://localhost:8080/static/${project.image}`}
+            alt={project.title}
+          />
+        </Box>
+      </div>
     );
   };
 
@@ -37,9 +39,9 @@ const Projects = () => {
   return (
     <>
       <div className="myTitle">My projects: </div>
-      <Box className="container">
-        <div className="projects">{projects.map(mappingProjects)}</div>
-      </Box>
+      <div className="container">
+        <div className="row">{projects.map(mappingProjects)}</div>
+      </div>
     </>
   );
 };
