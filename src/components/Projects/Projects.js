@@ -13,7 +13,7 @@ const Projects = () => {
   const mappingProjects = (project) => {
     console.log("project", project);
     return (
-      <div key={project.id} className="col-md-6">
+      <div key={project.id} className="col-md-8">
         <Box>
           <div className="projTitle" key={project.id}>
             {project.title}

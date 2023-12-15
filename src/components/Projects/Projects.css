@@ -1,3 +1,6 @@
+.container {
+    padding: 1rem;
+}
 .myTitle {
     padding: 1rem;
     text-align: center;
@@ -7,12 +10,11 @@
 .projects {
     display: flex;
     justify-content: center;
-    gap: 3rem;
 }
 
 .projTitle {
     color: #FAF446;
-
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -21,7 +23,7 @@
 }
 
 img {
-    max-width: 100%; /* Larghezza massima del container padre */
-    height: auto; /* Mantieni le proporzioni originali */
-    max-height: 200px; /* Altezza massima desiderata */
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
 }
