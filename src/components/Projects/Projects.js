@@ -33,6 +33,20 @@ const Projects = () => {
               <ul className="list-unstyled">
                 {project.technologyList.map(renderTechnologies)}
               </ul>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click here!
+                </a>
+              ) : (
+                <span></span>
+              )}
+              <div>
+                <a href={project.git}>Check the code!</a>
+              </div>
             </div>
           </div>
         </div>
