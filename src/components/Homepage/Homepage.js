@@ -16,55 +16,80 @@ function Homepage() {
   return (
     <>
       <div className="container">
-        <div className="title">Welcome to my Portfolio!</div>
-        <span className="description">
-          Hi, I'm Nicola, a passionate junior full stakc Web Developer from
-          Italy. Here you can see all my projects and contacts!
-        </span>
-        <div className="d-flex justify-content-center gap-5 flex-wrap mt-5">
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Html</h1>
-            <img className="tech" src={Html5} alt=""></img>
+        <div className="title">
+          <h1>Welcome to my Portfolio!</h1>
+          <span className="description">
+            Hi, I'm Nicola, a passionate junior full stack Web Developer from
+            Italy. Here you can see all my world!
+          </span>
+        </div>
+        <h1 className="skills text-center">Skills</h1>
+        <div className="row justify-content-center aling-items-center mt-5">
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-space-between align-items-center">
+              <h3>Html</h3>
+              <img className="tech" src={Html5} alt="" />
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Css</h1>
-            <img className="tech" src={css} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Css</h3>
+              <img className="tech" src={css} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Javascript</h1>
-            <img className="tech" src={javascript} alt="" />
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center gap-3">
+              <h3>Javascript</h3>
+              <img className="tech" src={javascript} alt="" />
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Bootstrap</h1>
-            <img className="tech" src={bootstrap} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center gap-3">
+              <h3>Bootstrap</h3>
+              <img className="tech" src={bootstrap} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Tailwind</h1>
-            <img className="tech" src={tailwind} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Tailwind</h3>
+              <img className="tech" src={tailwind} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Vue</h1>
-            <img className="tech" src={vue} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Vue</h3>
+              <img className="tech" src={vue} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Vite</h1>
-            <img className="tech" src={vite} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Vite</h3>
+              <img className="tech" src={vite} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Php</h1>
-            <img className="tech" src={php} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Php</h3>
+              <img className="tech" src={php} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Laravel</h1>
-            <img className="tech" src={laravel} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Laravel</h3>
+              <img className="tech" src={laravel} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>React</h1>
-            <img className="tech" src={react} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>React</h3>
+              <img className="tech" src={react} alt=""></img>
+            </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Java</h1>
-            <img className="tech" src={java} alt=""></img>
+          <div className="col-md-3 mb-4">
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3>Java</h3>
+              <img className="tech" src={java} alt=""></img>
+            </div>
           </div>
         </div>
       </div>

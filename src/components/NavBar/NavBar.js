@@ -1,56 +1,117 @@
 import React from "react";
 import logo from "../../assets/logo.jpg";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { routes } from "../../utils/routes";
-import { Box, HStack, Image, Link as ChakraLink } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  IconButton,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+} from "@chakra-ui/react";
+import { HStack, Image, Link as ChakraLink } from "@chakra-ui/react";
 import "./NavBar.css";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const goTo = (page) => (e) => {
-    navigate(page, {
-      state: { from: location.pathname, ParamentroUno: "path test" },
-    });
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const goTo = (page) => {
+    navigate(page);
+    onClose();
   };
 
   return (
-    <Box w="100%" bg="#121212" borderBottom="2px solid #FAF446">
-      <HStack className="navbar" align="center">
-        <ChakraLink onClick={goTo(routes.homePage)}>
-          <Image src={logo} boxSize="130px" />
-        </ChakraLink>
-        <HStack
-          spacing={4}
-          className="voice"
-          paddingEnd={50}
-          flex={1}
-          justifyContent="center"
+    <HStack
+      className="navbarContainer"
+      w="100%"
+      bg="#121212"
+      borderBottom="2px solid #FAF446"
+      position="fixed"
+      zIndex="1000"
+    >
+      <ChakraLink onClick={() => goTo(routes.homePage)}>
+        <Image src={logo} boxSize="130px" />
+      </ChakraLink>
+      <IconButton
+        aria-label="Toggle Menu"
+        icon={<FontAwesomeIcon icon={faBars} />}
+        onClick={onOpen}
+        color="#FAF446"
+        display={{ base: "block", md: "none" }}
+      />
+      <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Voci del Menu</DrawerHeader>
+          <DrawerBody>
+            <HStack
+              className="voice"
+              spacing={4}
+              flex={1}
+              justifyContent="space-around"
+            >
+              <ChakraLink
+                onClick={() => goTo(routes.homePage)}
+                color="#FAF446"
+                _hover={{ textDecoration: "none" }}
+              >
+                Home
+              </ChakraLink>
+              <ChakraLink
+                onClick={() => goTo("contacts")}
+                color="#FAF446"
+                _hover={{ textDecoration: "none" }}
+              >
+                Contacts
+              </ChakraLink>
+              <ChakraLink
+                onClick={() => goTo("projects")}
+                color="#FAF446"
+                _hover={{ textDecoration: "none" }}
+              >
+                Projects
+              </ChakraLink>
+            </HStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+      <HStack
+        className="voice"
+        spacing={4}
+        flex={1}
+        justifyContent="space-around"
+        display={{ base: "none", md: "flex" }}
+      >
+        <ChakraLink
+          onClick={() => goTo(routes.homePage)}
+          color="#FAF446"
+          _hover={{ textDecoration: "none" }}
         >
-          <ChakraLink
-            onClick={goTo(routes.homePage)}
-            color="#FAF446"
-            _hover={{ textDecoration: "none" }}
-          >
-            Home
-          </ChakraLink>
-          <ChakraLink
-            onClick={goTo("contacts")}
-            color="#FAF446"
-            _hover={{ textDecoration: "none" }}
-          >
-            Contacts
-          </ChakraLink>
-          <ChakraLink
-            onClick={goTo("projects")}
-            color="#FAF446"
-            _hover={{ textDecoration: "none" }}
-          >
-            Projects
-          </ChakraLink>
-        </HStack>
+          Home
+        </ChakraLink>
+        <ChakraLink
+          onClick={() => goTo("contacts")}
+          color="#FAF446"
+          _hover={{ textDecoration: "none" }}
+        >
+          Contacts
+        </ChakraLink>
+        <ChakraLink
+          onClick={() => goTo("projects")}
+          color="#FAF446"
+          _hover={{ textDecoration: "none" }}
+        >
+          Projects
+        </ChakraLink>
       </HStack>
-    </Box>
+    </HStack>
   );
 };
 

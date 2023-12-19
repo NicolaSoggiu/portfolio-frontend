@@ -1,3 +1,7 @@
+.navbarContainer {
+    height: 140px;
+    max-width: 100%;
+}
 .navbar {
     display: flex;
     justify-content: center;
@@ -7,3 +11,5 @@
 .voice {
     font-size: 15px;
 }
+
+

@@ -66,7 +66,7 @@ const Projects = () => {
   return (
     <>
       <div className="myTitle">My projects: </div>
-      <div className="container">
+      <div className="container containerMargin">
         <div className="row">{projects.map(mappingProjects)}</div>
       </div>
     </>
