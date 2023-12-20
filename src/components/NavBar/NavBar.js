@@ -39,17 +39,18 @@ const NavBar = () => {
         <Image src={logo} boxSize="130px" />
       </ChakraLink>
       <IconButton
+        ml="auto"
+        mr="20px"
         aria-label="Toggle Menu"
         icon={<FontAwesomeIcon icon={faBars} />}
         onClick={onOpen}
-        color="#FAF446"
         display={{ base: "block", md: "none" }}
       />
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Voci del Menu</DrawerHeader>
+        <DrawerContent bg="#121212">
+          <DrawerCloseButton color="#FAF446" />
+          <DrawerHeader color="#FAF446">Menu voice's</DrawerHeader>
           <DrawerBody>
             <HStack
               className="voice"
