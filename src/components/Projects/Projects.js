@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getProjects } from "../../services/api/projects/projectsApi";
 import { Box } from "@chakra-ui/react";
 import "./Projects.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -39,13 +41,18 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Click here!
+                  Open the website here!
                 </a>
               ) : (
                 <span></span>
               )}
-              <div>
-                <a href={project.git}>Check the code!</a>
+              <div className="d-flex align-items-center gap-1">
+                <FontAwesomeIcon
+                  href={project.git}
+                  fontSize={30}
+                  icon={faSquareGithub}
+                />
+                <a href={project.git}>See the code!</a>
               </div>
             </div>
           </div>
