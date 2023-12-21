@@ -1,5 +1,8 @@
-.container {
+.containerC {
     color: #FAF446;
+    
+    height: calc(100vh - 182px);
+
 }
 
 .title {
@@ -62,7 +65,6 @@
     transition: display 0.5s;
   }
 
-  /* Aggiungi una regola per il layout mobile */
 @media only screen and (max-width: 600px) {
     .card {
       flex-direction: column;
