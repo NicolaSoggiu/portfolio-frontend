@@ -8,14 +8,91 @@
     color: #FAF446;
 }
 
-.lyst a {
-    list-style: none;
-}
+.card {
+    width: 410px;
+    height: 254px;
+    margin-top: 2rem;
+    border-radius: 4px;
+    background: #212121;
+    display: flex;  
+    flex-direction: row;
+    margin-inline: auto;
+    gap: 5px;
+    padding: .4em;
+  }
+  
+  .card p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: #212121;
+    border: 1px solid #FAF446;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card p:hover {
+    flex: 4;
+  }
+  
+  .card p a {
+    min-width: 14em;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #FAF446;
+    letter-spacing: .1em;
+  }
+  
+  .card p:hover a {
+    transform: rotate(0);
+  }
 
-ul {
-    padding-left: 0;
-}
+  .card p:hover .contact-info {
+    display: block;
+  }
+  .contact-info {
+    display: none;
+    transition: display 0.5s;
+  }
 
-.contactIcon {
-    padding-right: 0.5rem;
-}
+  /* Aggiungi una regola per il layout mobile */
+@media only screen and (max-width: 600px) {
+    .card {
+      flex-direction: column;
+      width: 300px;
+      height: 500px;
+    }
+  
+    .card p {
+      flex: auto;
+      height: auto;
+      text-align: center;
+    }
+  
+    .card p:hover {
+      height: auto;
+      rotate: none;
+    }
+
+    .card p a {
+        transform: none;
+        rotate: none;
+    }
+
+    .card p:hover a {
+        transform: none;
+        rotate: none;
+    }
+
+    .contact-info {
+        display: block;
+    }
+  }
+  

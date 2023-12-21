@@ -3,6 +3,7 @@ import { getProjects } from "../../services/api/projects/projectsApi";
 import { Box } from "@chakra-ui/react";
 import "./Projects.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
@@ -35,24 +36,29 @@ const Projects = () => {
               <ul className="list-unstyled">
                 {project.technologyList.map(renderTechnologies)}
               </ul>
-              {project.link ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open the website here!
+
+              <div className="d-flex flex-column align-items-start gap-2">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon className="pe-4 ps-1" icon={faDesktop} />
+                    Open the website here!
+                  </a>
+                ) : (
+                  <span></span>
+                )}
+                <a href={project.git}>
+                  <FontAwesomeIcon
+                    className="pe-3"
+                    href={project.git}
+                    fontSize={30}
+                    icon={faSquareGithub}
+                  />
+                  See the code!
                 </a>
-              ) : (
-                <span></span>
-              )}
-              <div className="d-flex align-items-center gap-1">
-                <FontAwesomeIcon
-                  href={project.git}
-                  fontSize={30}
-                  icon={faSquareGithub}
-                />
-                <a href={project.git}>See the code!</a>
               </div>
             </div>
           </div>
