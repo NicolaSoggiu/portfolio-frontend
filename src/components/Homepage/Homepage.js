@@ -15,7 +15,7 @@ import java from "../../assets/java.png";
 function Homepage() {
   return (
     <>
-      <div className="container">
+      <div className="container pb-4">
         <div className="title">
           <h1>Welcome to my Portfolio!</h1>
           <span className="description">
@@ -23,7 +23,7 @@ function Homepage() {
             Italy. Here you can see all my world!
           </span>
         </div>
-        <h1 className="skills text-center">Stack</h1>
+        <h1 className="text-center">Stack</h1>
         <div className="row justify-content-center aling-items-center mt-5">
           <div className="col-md-3 mb-4">
             <div className="d-flex flex-column justify-content-space-between align-items-center">
@@ -92,36 +92,19 @@ function Homepage() {
             </div>
           </div>
         </div>
+        <div className="skills d-flex flex-column justify-content-center align-items-center mt-5 p-4">
+          <h1 className="text-center">Skills</h1>
+          <ul>
+            <li>Problem solving</li>
+            <li>Team working</li>
+            <li>Creativity</li>
+            <li>English</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
       </div>
-      {/* <Test
-        // name="andrea"
-        click={() => {
-          console.log("clicked");
-        }}
-      /> */}
     </>
   );
 }
-
-// const isNameDefined = (name) => {
-//   if (name) {
-//     return <span>{name}</span>;
-//   } else {
-//     return <span>Nome non definito </span>;
-//   }
-// };
-
-// const Test = ({ name, click, children }) => {
-//   return (
-//     <div>
-//       {/* { name ? <span>{name}</span> : <span>Nome non definito</span> } */}
-//       {isNameDefined(name)}
-//       <span onClick={click}>Ciao sono il test</span>
-//       <div>{children}</div>
-//     </div>
-//   );
-// };
-
-// Test.defaultProps = { name: "nicola" };
 
 export default Homepage;

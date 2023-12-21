@@ -13,3 +13,9 @@
     width: 83px;
     object-fit: center;
 }
+
+.skills {
+    margin: auto;
+    width: fit-content;
+    border: 5px solid #FAF446;
+}
