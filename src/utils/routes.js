@@ -1,6 +1,7 @@
 export const routes = {
   layoutPage: "/",
   homePage: "/",
-  contactsPage: "/contacts",
   projects: "/projects",
+  experience: "/experience",
+  contactsPage: "/contacts",
 };

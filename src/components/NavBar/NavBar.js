@@ -66,18 +66,25 @@ const NavBar = () => {
                 Home
               </ChakraLink>
               <ChakraLink
-                onClick={() => goTo("contacts")}
-                color="#FAF446"
-                _hover={{ textDecoration: "none" }}
-              >
-                Contacts
-              </ChakraLink>
-              <ChakraLink
                 onClick={() => goTo("projects")}
                 color="#FAF446"
                 _hover={{ textDecoration: "none" }}
               >
                 Projects
+              </ChakraLink>
+              <ChakraLink
+                onClick={() => goTo("experience")}
+                color="#FAF446"
+                _hover={{ textDecoration: "none" }}
+              >
+                Experience
+              </ChakraLink>
+              <ChakraLink
+                onClick={() => goTo("contacts")}
+                color="#FAF446"
+                _hover={{ textDecoration: "none" }}
+              >
+                Contacts
               </ChakraLink>
             </HStack>
           </DrawerBody>
@@ -98,18 +105,25 @@ const NavBar = () => {
           Home
         </ChakraLink>
         <ChakraLink
-          onClick={() => goTo("contacts")}
-          color="#FAF446"
-          _hover={{ textDecoration: "none" }}
-        >
-          Contacts
-        </ChakraLink>
-        <ChakraLink
           onClick={() => goTo("projects")}
           color="#FAF446"
           _hover={{ textDecoration: "none" }}
         >
           Projects
+        </ChakraLink>
+        <ChakraLink
+          onClick={() => goTo("experience")}
+          color="#FAF446"
+          _hover={{ textDecoration: "none" }}
+        >
+          Experience
+        </ChakraLink>
+        <ChakraLink
+          onClick={() => goTo("contacts")}
+          color="#FAF446"
+          _hover={{ textDecoration: "none" }}
+        >
+          Contacts
         </ChakraLink>
       </HStack>
     </HStack>

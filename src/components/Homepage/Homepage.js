@@ -23,7 +23,7 @@ function Homepage() {
             Italy. Here you can see all my world!
           </span>
         </div>
-        <h1 className="skills text-center">Skills</h1>
+        <h1 className="skills text-center">Stack</h1>
         <div className="row justify-content-center aling-items-center mt-5">
           <div className="col-md-3 mb-4">
             <div className="d-flex flex-column justify-content-space-between align-items-center">
