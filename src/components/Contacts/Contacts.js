@@ -18,7 +18,7 @@ const Contacts = () => {
         <p>
           <a href="#">
             <span className="rotate">Phone </span>
-            <div className="contact-info">3515733336</div>
+            <div className="contact-info">+39 3515733336</div>
           </a>
         </p>
         <p>
